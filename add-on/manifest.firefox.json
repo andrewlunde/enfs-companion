@@ -1,0 +1,63 @@
+{
+  "action": {
+    "browser_style": false
+  },
+  "options_ui": {
+    "browser_style": false
+  },
+  "background": {
+    "scripts": ["dist/bundles/backgroundPage.firefox.bundle.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ipfs-firefox-addon@lidel.org",
+      "strict_min_version": "111.0"
+    }
+  },
+  "permissions": [
+    "idle",
+    "tabs",
+    "notifications",
+    "proxy",
+    "storage",
+    "unlimitedStorage",
+    "contextMenus",
+    "clipboardWrite",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_scripts": [ ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+dweb",
+      "name": "IPFS Companion: DWEB Protocol Handler",
+      "uriTemplate": "https://dweb.link/ipfs/?uri=%s"
+    },
+    {
+      "protocol": "web+ipns",
+      "name": "IPFS Companion: IPNS Protocol Handler",
+      "uriTemplate": "https://dweb.link/ipns/?uri=%s"
+    },
+    {
+      "protocol": "web+ipfs",
+      "name": "IPFS Companion: IPFS Protocol Handler",
+      "uriTemplate": "https://dweb.link/ipfs/?uri=%s"
+    },
+    {
+      "protocol": "dweb",
+      "name": "IPFS Companion: DWEB Protocol Handler",
+      "uriTemplate": "https://dweb.link/ipfs/?uri=%s"
+    },
+    {
+      "protocol": "ipns",
+      "name": "IPFS Companion: IPNS Protocol Handler",
+      "uriTemplate": "https://dweb.link/ipns/?uri=%s"
+    },
+    {
+      "protocol": "ipfs",
+      "name": "IPFS Companion: IPFS Protocol Handler",
+      "uriTemplate": "https://dweb.link/ipfs/?uri=%s"
+    }
+  ]
+}

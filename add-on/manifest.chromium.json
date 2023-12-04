@@ -1,0 +1,22 @@
+{
+  "minimum_chrome_version": "111",
+  "background": {
+    "service_worker": "dist/bundles/backgroundPage.bundle.js"
+  },
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "contextMenus",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "idle",
+    "notifications",
+    "scripting",
+    "storage",
+    "tabs",
+    "unlimitedStorage",
+    "webNavigation",
+    "webRequest"
+  ],
+  "incognito": "not_allowed"
+}
